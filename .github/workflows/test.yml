@@ -1,5 +1,9 @@
-name: 'test-on-pr'
-on: [pull_request]
+name: "test-on-pr"
+on:
+  push:
+    branches:
+      - "test"
+  workflow_dispatch:
 
 jobs:
   test-tauri:
