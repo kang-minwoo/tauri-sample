@@ -2,6 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/tauri";
 import "./App.css";
+import packages from "../package.json";
 
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
@@ -27,6 +28,8 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
+
+      <p>v{packages.version}</p>
 
       <p>Click on the Tauri, Vite, and React logos to learn more.</p>
 
